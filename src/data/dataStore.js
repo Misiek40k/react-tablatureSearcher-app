@@ -20,6 +20,7 @@ export const settings = {
           variant: 'danger',
         },
       },
+      placeholder: 'Search for tablature...',
     },
   },
 };
