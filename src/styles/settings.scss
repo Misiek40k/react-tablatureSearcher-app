@@ -6,6 +6,7 @@ $color-background: #c8d6e5;
 $color-primary: #ff9f43;
 $color-secondary: #218c74;
 $color-success: #3968cf;
+$color-warning: #e1644e;
 
 $font-header: "Montserrat", sans-serif;
 $font-text: "Source Sans Pro", sans-serif;
@@ -15,6 +16,9 @@ $base-unit: 1rem * 1.25;
 $radius: $base-unit * 0.25;
 $base-size: $base-unit * 0.6;
 $transition: all 0.5s;
+
+$fw-regular: 400;
+$fw-bold: 700;
 
 $br-mobile: 360px;
 $br-tablet: 768px;
