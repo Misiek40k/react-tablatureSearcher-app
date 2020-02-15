@@ -8,20 +8,19 @@ import Search from '../../features/Search/Search';
 import styles from './ContentContainer.module.scss';
 
 const ContentContainer = () => {
-  const pageTitleData = settings.contentContainer.pageTitle;
-  const searchData = settings.contentContainer.search;
+  const data = {...settings.contentContainer};
 
   return (
     <section className={styles.component}>
       <Grid>
         <Row middle="md">
           <Col sm={12} md={8} lg={6} mdOffset={2} lgOffset={3}>
-            <PageTitle {...pageTitleData} />
+            <PageTitle {...data.pageTitle} />
           </Col>
         </Row>
         <Row middle="md">
           <Col sm={12} md={8} lg={6} mdOffset={2} lgOffset={3}>
-            <Search {...searchData} />
+            <Search {...data.search} />
           </Col>
         </Row>
         <Row>
