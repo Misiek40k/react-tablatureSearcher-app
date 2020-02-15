@@ -1,0 +1,11 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  padding: ($base-size * 4) $base-size;
+  width: 100%;
+
+  &.centered {
+    padding: 0;
+    width: auto;
+  }
+}

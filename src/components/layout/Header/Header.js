@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
-import Icon from '../Icon/Icon';
+import Icon from '../../common/Icon/Icon';
 
 import styles from './Header.module.scss';
 

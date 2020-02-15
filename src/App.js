@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
-import Header from './components/Header/Header';
+
+import Header from './components/layout/Header/Header';
+import ContentContainer from './components/layout/ContentContainer/ContentContainer';
 
 export default class App extends Component {
 
@@ -8,6 +10,10 @@ export default class App extends Component {
       name: 'Tablature searcher',
       icon: 'guitar',
     },
+    content: {
+      title: 'Search',
+      subtitle: 'and play your best songs',
+    },
   }
 
   render() {
@@ -15,7 +21,7 @@ export default class App extends Component {
       <Fragment>
         <Header {...this.state.header} />
         <main>
-          content
+          <ContentContainer {...this.state.content} />
         </main>
       </Fragment>
     );
