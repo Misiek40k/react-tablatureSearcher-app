@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 import PageTitle from '../PageTitle/PageTitle';
+import Search from '../../features/Search/Search';
 
 import styles from './ContentContainer.module.scss';
-import Search from '../../features/Search/Search';
 
 const ContentContainer = ({ title, subtitle }) => (
   <section className={styles.component}>
