@@ -46,7 +46,7 @@ export default class Search extends Component {
             <Icon name={search.ico} />
             <span>{search.txt}</span>
           </Button>
-          <Button onClick={this.handleCancel} variant='danger'>
+          <Button onClick={this.handleCancel} variant={cancel.variant}>
             <Icon name={cancel.ico} />
             <span>{cancel.txt}</span>
           </Button>
