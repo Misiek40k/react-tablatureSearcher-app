@@ -1,0 +1,25 @@
+@import "../../styles/settings.scss";
+
+.component {
+  background: $color-dark;
+  padding: ($base-size * 1.5) 0;
+  color: $color-light;
+
+  @include max-media($br-tablet) {
+      text-align: center;
+  }
+}
+
+.logo {
+  color: $color-light;
+  font-size: 24px;
+}
+
+.name {
+  position: relative;
+  top: ($base-size / -4);
+  left: $base-size;
+  font-family: $font-header;
+  text-transform: lowercase;
+  font-size: ($base-size * 1.5);
+}
