@@ -9,7 +9,9 @@ import styles from './Search.module.scss';
 export default class Search extends Component {
   static propTypes = {
     text: PropTypes.string,
-    action: PropTypes.func,
+    buttons: PropTypes.object,
+    search: PropTypes.string,
+    cancel: PropTypes.string,
   }
 
   static defaultProps = {
@@ -29,6 +31,8 @@ export default class Search extends Component {
   }
 
   render() {
+    const { buttons: { search, cancel } } = this.props;
+
     return (
       <div className={styles.component}>
         <input
@@ -39,12 +43,12 @@ export default class Search extends Component {
         />
         <div className={styles.buttons + (this.state.visibleButtons ? ` ${styles.buttonsShown}` : '')}>
           <Button onClick={this.handleOK}>
-            <Icon name='search' />
-            <span> Search</span>
+            <Icon name={search.ico} />
+            <span>{search.txt}</span>
           </Button>
           <Button onClick={this.handleCancel} variant='danger'>
-            <Icon name='ban' />
-            <span> Cancel</span>
+            <Icon name={cancel.ico} />
+            <span>{cancel.txt}</span>
           </Button>
         </div>
       </div>

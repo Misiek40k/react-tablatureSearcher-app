@@ -5,23 +5,12 @@ import ContentContainer from './components/layout/ContentContainer/ContentContai
 
 export default class App extends Component {
 
-  state = {
-    header: {
-      name: 'Tablature searcher',
-      icon: 'guitar',
-    },
-    content: {
-      title: 'Search',
-      subtitle: 'and play your best songs',
-    },
-  }
-
   render() {
     return (
       <Fragment>
-        <Header {...this.state.header} />
+        <Header />
         <main>
-          <ContentContainer {...this.state.content} />
+          <ContentContainer />
         </main>
       </Fragment>
     );
