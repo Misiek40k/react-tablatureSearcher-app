@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { settings } from '../../../data/dataStore';
 
-import PageTitle from '../PageTitle/PageTitle';
+import Title from '../../common/Title/Title';
 import Search from '../../features/Search/Search';
 
 import styles from './ContentContainer.module.scss';
@@ -23,7 +23,7 @@ const ContentContainer = () => {
           setApiData(result);
         },
         (error) => {
-          console.log('fail');
+          console.log(error);
         }
       );
   };
@@ -33,7 +33,7 @@ const ContentContainer = () => {
       <Grid>
         <Row middle="md">
           <Col sm={12} md={8} lg={6} mdOffset={2} lgOffset={3}>
-            <PageTitle {...data.pageTitle} />
+            <Title {...data.pageTitle} />
           </Col>
         </Row>
         <Row middle="md">
@@ -47,11 +47,9 @@ const ContentContainer = () => {
             />
           </Col>
         </Row>
-        {apiData.length > 0 && (<Row>
-          <Col sm={12} md={8} lg={6} mdOffset={2} lgOffset={3}>
-            <List searchValue={value} apiData={apiData} />
-          </Col>
-        </Row>)}
+        {apiData.length > 0 &&
+          <List apiData={apiData} />
+        }
       </Grid>
     </section>
   );

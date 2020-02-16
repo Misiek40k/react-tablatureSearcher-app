@@ -23,4 +23,7 @@ export const settings = {
       placeholder: 'Search for tablature...',
     },
   },
+  list: {
+    title: 'Found records: ',
+  },
 };
