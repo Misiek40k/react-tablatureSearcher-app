@@ -6,9 +6,9 @@ export const settings = {
     mdOffset: 2,
     lgOffset: 3,
   },
+  logoIcon: 'guitar',
   header: {
     name: 'Tablature searcher',
-    icon: 'guitar',
   },
   contentContainer: {
     pageTitle: {

@@ -1,4 +1,4 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
 
 .component {
   display: block;
@@ -9,12 +9,23 @@
   transition: $transition;
   &:hover {
     transform: translateY(-15px);
-    box-shadow: 0 40px 40px 0 rgba(0,0,0,0.16);
+    box-shadow: 0 $base-size * 3.33 $base-size * 3.33 0 rgba(0, 0, 0, 0.16);
   }
 }
 
-.name {
-  font-size: ($base-size * 2);
+.title {
+  font-size: ($base-size * 1.5);
   padding-left: ($base-size * 2);
   margin: 0;
+}
+
+.author {
+  font-size: ($base-size * 1.5);
+  padding-left: ($base-size * 2);
+  margin: 0;
+}
+
+.tabTypes {
+  background: $color-primary;
+  color: $color-light;
 }

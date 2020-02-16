@@ -1,0 +1,8 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  color: $color-light;
+  padding-left: ($base-size * 2);
+  margin: 0;
+  white-space: nowrap;
+}

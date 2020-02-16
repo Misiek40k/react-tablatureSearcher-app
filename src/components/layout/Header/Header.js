@@ -12,7 +12,7 @@ const Header = () => (
       <Row>
         <Col xs>
           <div className={styles.logo}>
-            <Icon name={settings.header.icon} />
+            <Icon name={settings.logoIcon} />
             <span className={styles.name}>{settings.header.name}</span>
           </div>
         </Col>

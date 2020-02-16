@@ -3,21 +3,32 @@ import PropTypes from 'prop-types';
 import { Row, Col } from 'react-flexbox-grid';
 import { settings } from '../../../data/dataStore';
 
+import TabType from '../../common/TabType/TabType';
+
 import styles from './ListItem.module.scss';
 
-const ListItem = ({ title, artist: { name } }) => {
+const ListItem = ({ title, artist: { name }, tabTypes }) => {
   return (
 
     <Col {...settings.col}>
       <div className={styles.component}>
         <Row>
-          <Col md={6}>
-            <h4 className={styles.name}>Song: {title}</h4>
+          <Col xs>
+            <h4 className={styles.title}>{title}</h4>
           </Col>
         </Row>
         <Row>
-          <Col md={6}>
-            <span className={styles.name}>Artist: {name}</span>
+          <Col xs>
+            <span className={styles.author}>By: <strong>{name}</strong></span>
+          </Col>
+        </Row>
+        <Row center="sm">
+          <Col xs>
+            <div className={styles.tabTypes}>
+              {tabTypes.map(item => (
+                <TabType key={item} tabType={item} />
+              ))}
+            </div>
           </Col>
         </Row>
       </div>
@@ -29,6 +40,7 @@ ListItem.propTypes = {
   title: PropTypes.string.isRequired,
   artist: PropTypes.object.isRequired,
   name: PropTypes.string,
+  tabTypes: PropTypes.array,
 };
 
 export default ListItem;
