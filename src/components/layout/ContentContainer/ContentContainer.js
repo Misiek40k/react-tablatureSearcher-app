@@ -32,12 +32,12 @@ const ContentContainer = () => {
     <section className={styles.component}>
       <Grid>
         <Row middle="md">
-          <Col sm={12} md={8} lg={6} mdOffset={2} lgOffset={3}>
+          <Col {...settings.col}>
             <Title {...data.pageTitle} />
           </Col>
         </Row>
         <Row middle="md">
-          <Col sm={12} md={8} lg={6} mdOffset={2} lgOffset={3}>
+          <Col {...settings.col}>
             <Search {...data.search}
               value={value}
               setValue={setValue}

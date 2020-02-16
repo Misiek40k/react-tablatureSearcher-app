@@ -1,4 +1,11 @@
 export const settings = {
+  col: {
+    sm: 12,
+    md: 8,
+    lg: 6,
+    mdOffset: 2,
+    lgOffset: 3,
+  },
   header: {
     name: 'Tablature searcher',
     icon: 'guitar',

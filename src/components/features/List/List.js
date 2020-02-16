@@ -12,13 +12,13 @@ const List = ({ apiData }) => {
   return (
     <Fragment>
       <Row>
-        <Col sm={12} md={8} lg={6} mdOffset={2} lgOffset={3}>
+        <Col {...settings.col}>
           <Title subtitle={`${data.title} ${apiData.length}`} />
         </Col>
       </Row>
       <Row>
         {apiData.map(item => (
-          <ListItem key={item.id} {...apiData} />
+          <ListItem key={item.id} {...item} />
         ))}
       </Row>
     </Fragment>
