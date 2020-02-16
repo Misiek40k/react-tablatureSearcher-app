@@ -8,7 +8,7 @@ import Checkboxes from '../../common/Checkboxes/Checkboxes';
 
 import styles from './Search.module.scss';
 
-const Search = ({ makeVisible, visibleButtons, setValue, value, fetchData }) => {
+const Search = ({ makeVisible, visibleButtons, setValue, value, fetchData, checked, setChecked }) => {
   const data = { ...settings.contentContainer.search };
 
   return (
@@ -24,7 +24,7 @@ const Search = ({ makeVisible, visibleButtons, setValue, value, fetchData }) => 
       />
       <div className={styles.checkboxes}>
         {data.checkboxes.map(item => (
-          <Checkboxes key={item} label={item} />
+          <Checkboxes key={item} label={item} checked={checked} setChecked={setChecked} />
         ))}
       </div>
       <div className={styles.buttons + (visibleButtons ? ` ${styles.buttonsShown}` : '')}>
@@ -53,6 +53,8 @@ Search.propTypes = {
   setValue: PropTypes.func,
   value: PropTypes.string,
   fetchData: PropTypes.func,
+  checked: PropTypes.object,
+  setChecked: PropTypes.func,
 };
 
 

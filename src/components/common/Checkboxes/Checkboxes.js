@@ -6,11 +6,14 @@ import Icon from '../Icon/Icon';
 
 import styles from './Checkboxes.module.scss';
 
-const Checkboxes = ({ label }) => {
+const Checkboxes = ({ label, checked, setChecked }) => {
+
   return (
     <label className={styles.component}>
       <input
         type='checkbox'
+        checked={checked[label]}
+        onChange={() => setChecked({ ...checked, [label]: !checked[label] })}
       />
       {<Icon name={settings.logoIcon} />}
       <span>{label}</span>
@@ -20,6 +23,8 @@ const Checkboxes = ({ label }) => {
 
 Checkboxes.propTypes = {
   label: PropTypes.string.isRequired,
+  checked: PropTypes.object.isRequired,
+  setChecked: PropTypes.func.isRequired,
 };
 
 export default Checkboxes;

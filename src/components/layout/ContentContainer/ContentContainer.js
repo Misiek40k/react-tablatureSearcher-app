@@ -14,6 +14,12 @@ const ContentContainer = () => {
   const [value, setValue] = useState('');
   const [visibleButtons, makeVisible] = useState(false);
   const [apiData, setApiData] = useState([]);
+  const [checked, setChecked] = useState({
+    player: true,
+    guitar: true,
+    chords: true,
+    bass: true,
+  });
 
   const fetchData = (value) => {
     fetch(`${data.fetchReq}${value}`)
@@ -44,11 +50,13 @@ const ContentContainer = () => {
               visibleButtons={visibleButtons}
               makeVisible={makeVisible}
               fetchData={fetchData}
+              checked={checked}
+              setChecked={setChecked}
             />
           </Col>
         </Row>
         {apiData.length > 0 &&
-          <List apiData={apiData} />
+          <List apiData={apiData} ckecked={checked} />
         }
       </Grid>
     </section>
