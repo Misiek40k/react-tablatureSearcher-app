@@ -4,6 +4,7 @@ import { Row, Col } from 'react-flexbox-grid';
 import { settings } from '../../../data/dataStore';
 
 import Title from '../../common/Title/Title';
+import ListItem from '../ListItem/ListItem';
 
 const List = ({ apiData }) => {
   const data = settings.list;
@@ -16,7 +17,9 @@ const List = ({ apiData }) => {
         </Col>
       </Row>
       <Row>
-
+        {apiData.map(item => (
+          <ListItem key={item.id} {...apiData} />
+        ))}
       </Row>
     </Fragment>
   );

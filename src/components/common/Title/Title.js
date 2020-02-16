@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './Title.module.scss';
 
-const PageTitle = ({ title, subtitle }) => (
+const Title = ({ title, subtitle }) => (
   <Fragment>
     {title && <h1 className={styles.title}>{title}</h1>}
     {subtitle && <h3 className={styles.subtitle}>{subtitle}</h3>}
@@ -11,9 +11,9 @@ const PageTitle = ({ title, subtitle }) => (
 
 );
 
-PageTitle.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
+Title.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
 };
 
-export default PageTitle;
+export default Title;
