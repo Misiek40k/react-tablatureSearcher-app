@@ -15,6 +15,7 @@ export const settings = {
       title: 'Search',
       subtitle: 'and play your best songs',
     },
+    fetchReq: 'http://www.songsterr.com/a/ra/songs.json?pattern=',
     search: {
       buttons: {
         search: {

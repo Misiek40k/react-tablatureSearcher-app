@@ -16,7 +16,7 @@ const ContentContainer = () => {
   const [apiData, setApiData] = useState([]);
 
   const fetchData = (value) => {
-    fetch(`http://www.songsterr.com/a/ra/songs.json?pattern=${value}`)
+    fetch(`${data.fetchReq}${value}`)
       .then(res => res.json())
       .then(
         (result) => {
