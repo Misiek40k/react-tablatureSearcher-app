@@ -1,38 +1,46 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { settings } from '../../../data/dataStore';
 
 import Button from '../../common/Button/Button';
 import Icon from '../../common/Icon/Icon';
+import Checkboxes from '../../common/Checkboxes/Checkboxes';
 
 import styles from './Search.module.scss';
 
-const Search = ({ buttons: { search, cancel }, placeholder, makeVisible, visibleButtons, setValue, value, fetchData }) => {
+const Search = ({ makeVisible, visibleButtons, setValue, value, fetchData }) => {
+  const data = { ...settings.contentContainer.search };
 
   return (
     <div className={styles.component}>
       <input
         type='text'
-        placeholder={placeholder}
+        placeholder={data.placeholder}
         value={value}
         onChange={event => {
           setValue(event.target.value);
           event.target.value.length ? makeVisible(true) : makeVisible(false);
         }}
       />
+      <div className={styles.checkboxes}>
+        {data.checkboxes.map(item => (
+          <Checkboxes key={item} label={item} />
+        ))}
+      </div>
       <div className={styles.buttons + (visibleButtons ? ` ${styles.buttonsShown}` : '')}>
         <Button onClick={() => fetchData(value)}>
-          <Icon name={search.ico} />
-          <span>{search.txt}</span>
+          <Icon name={data.buttons.search.ico} />
+          <span>{data.buttons.search.txt}</span>
         </Button>
         <Button
-          variant={cancel.variant}
+          variant={data.buttons.cancel.variant}
           onClick={() => {
             setValue('');
             makeVisible(false);
           }}
         >
-          <Icon name={cancel.ico} />
-          <span>{cancel.txt}</span>
+          <Icon name={data.buttons.cancel.ico} />
+          <span>{data.buttons.cancel.txt}</span>
         </Button>
       </div>
     </div>
@@ -40,10 +48,6 @@ const Search = ({ buttons: { search, cancel }, placeholder, makeVisible, visible
 };
 
 Search.propTypes = {
-  placeholder: PropTypes.string,
-  buttons: PropTypes.object,
-  search: PropTypes.string,
-  cancel: PropTypes.string,
   makeVisible: PropTypes.func,
   visibleButtons: PropTypes.bool,
   setValue: PropTypes.func,

@@ -29,6 +29,7 @@ export const settings = {
         },
       },
       placeholder: 'Search for tablature...',
+      checkboxes: ['player','guitar','chords','bass'],
     },
   },
   list: {

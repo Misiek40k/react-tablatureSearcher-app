@@ -1,0 +1,11 @@
+@import "../../../styles/settings.scss";
+
+.component {
+  margin-bottom: $base-size;
+  border-bottom: 3px solid $color-primary;
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 3px solid $color-success;
+  }
+}

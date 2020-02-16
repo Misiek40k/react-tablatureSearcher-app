@@ -38,7 +38,7 @@ const ContentContainer = () => {
         </Row>
         <Row middle="md">
           <Col {...settings.col}>
-            <Search {...data.search}
+            <Search
               value={value}
               setValue={setValue}
               visibleButtons={visibleButtons}
