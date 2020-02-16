@@ -22,7 +22,7 @@ const ListItem = ({ title, artist: { name }, tabTypes }) => {
             <span className={styles.author}>By: <strong>{name}</strong></span>
           </Col>
         </Row>
-        <Row center="sm">
+        <Row>
           <Col xs>
             <div className={styles.tabTypes}>
               {tabTypes.map(item => (
