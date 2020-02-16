@@ -10,7 +10,6 @@ const Checkboxes = ({ label }) => {
   return (
     <label className={styles.component}>
       <input
-        className={styles.input}
         type='checkbox'
       />
       {<Icon name={settings.logoIcon} />}
