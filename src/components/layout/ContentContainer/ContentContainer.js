@@ -56,7 +56,7 @@ const ContentContainer = () => {
           </Col>
         </Row>
         {apiData.length > 0 &&
-          <List apiData={apiData} ckecked={checked} />
+          <List apiData={apiData} checked={checked} />
         }
       </Grid>
     </section>

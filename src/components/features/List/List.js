@@ -6,8 +6,13 @@ import { settings } from '../../../data/dataStore';
 import Title from '../../common/Title/Title';
 import ListItem from '../ListItem/ListItem';
 
-const List = ({ apiData }) => {
+const List = ({ apiData, checked }) => {
   const data = settings.list;
+
+  const compareTabTypes = (item, checked) => {
+
+    return item;
+  };
 
   return (
     <Fragment>
@@ -17,17 +22,21 @@ const List = ({ apiData }) => {
         </Col>
       </Row>
       <Row>
-        {apiData.map(item => (
-          <ListItem key={item.id} {...item} />
-        ))}
+        {apiData
+          .filter(item => {
+            return compareTabTypes(item, checked);
+          })
+          .map(item => (
+            <ListItem key={item.id} {...item} />
+          ))}
       </Row>
     </Fragment>
   );
 };
 
 List.propTypes = {
-  searchValue: PropTypes.string,
   apiData: PropTypes.array,
+  checked: PropTypes.object,
 };
 
 export default List;
