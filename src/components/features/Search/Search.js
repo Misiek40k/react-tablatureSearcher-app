@@ -14,17 +14,23 @@ const Search = ({ buttons: { search, cancel }, placeholder, makeVisible, visible
         type='text'
         placeholder={placeholder}
         value={value}
-        onChange={(event) => {
+        onChange={event => {
           setValue(event.target.value);
           event.target.value.length ? makeVisible(true) : makeVisible(false);
         }}
       />
       <div className={styles.buttons + (visibleButtons ? ` ${styles.buttonsShown}` : '')}>
-        <Button onClick={()=>fetchData(value)}>
+        <Button onClick={() => fetchData(value)}>
           <Icon name={search.ico} />
           <span>{search.txt}</span>
         </Button>
-        <Button variant={cancel.variant}>
+        <Button
+          variant={cancel.variant}
+          onClick={() => {
+            setValue('');
+            makeVisible(false);
+          }}
+        >
           <Icon name={cancel.ico} />
           <span>{cancel.txt}</span>
         </Button>
