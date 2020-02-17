@@ -10,9 +10,12 @@ import ListItem from '../ListItem/ListItem';
 const List = ({ apiData, checked }) => {
   const data = settings.list;
 
-  const compareTabTypes = (item, checked) => {
-    console.log(item.tabTypes[0]);
-    if (checked[convertTabType(item.tabTypes[0])]) { return item; }
+  const sortTabTypes = (item, checked) => {
+    const newList = item.tabTypes.map(item => {
+      return convertTabType(item);
+    });
+
+    return item;
   };
 
   return (
@@ -25,7 +28,7 @@ const List = ({ apiData, checked }) => {
       <Row>
         {apiData
           .filter(item => {
-            return compareTabTypes(item, checked);
+            return sortTabTypes(item, checked);
           })
           .map(item => (
             <ListItem key={item.id} {...item} />
