@@ -1,0 +1,28 @@
+@import "../../../styles/settings.scss";
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: $color-light;
+
+  li {
+    display: inline-block;
+    margin-left: 0.5rem;
+  }
+
+  span {
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 6px;
+    background-color: $color-background;
+    font-size: 0;
+    cursor: pointer;
+
+    &.active,
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+}
