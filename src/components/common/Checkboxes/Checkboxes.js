@@ -15,8 +15,10 @@ const Checkboxes = ({ label, checked, setChecked }) => {
         checked={checked[label]}
         onChange={() => setChecked({ ...checked, [label]: !checked[label] })}
       />
-      {<Icon name={settings.logoIcon} />}
-      <span>{label}</span>
+      <span>
+        {<Icon name={settings.logoIcon} />}
+        <span>{label}</span>
+      </span>
     </label>
   );
 };

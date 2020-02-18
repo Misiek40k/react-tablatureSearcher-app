@@ -4,6 +4,8 @@
   margin-bottom: $base-size;
   border-bottom: 3px solid $color-primary;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 
   &:hover {
     border-bottom: 3px solid $color-success;
