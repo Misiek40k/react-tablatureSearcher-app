@@ -10,13 +10,12 @@ import ListItem from '../ListItem/ListItem';
 const List = ({ apiData, checked }) => {
   const data = settings.list;
 
-  const sortTabTypes = (item, checked) => {
-    const newList = item.tabTypes.map(item => {
-      return convertTabType(item);
+  const filteredList = apiData.filter(item => {
+    const shouldBeVisible = item.tabTypes.every(type => {
+      return checked[convertTabType(type)];
     });
-
-    return item;
-  };
+    return shouldBeVisible;
+  });
 
   return (
     <Fragment>
@@ -26,13 +25,9 @@ const List = ({ apiData, checked }) => {
         </Col>
       </Row>
       <Row>
-        {apiData
-          .filter(item => {
-            return sortTabTypes(item, checked);
-          })
-          .map(item => (
-            <ListItem key={item.id} {...item} />
-          ))}
+        {filteredList.map(item => (
+          <ListItem key={item.id} {...item} />
+        ))}
       </Row>
     </Fragment>
   );
