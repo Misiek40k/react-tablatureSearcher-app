@@ -9,6 +9,10 @@
   li {
     display: inline-block;
     margin-left: $base-size * 0.66;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
   }
 
   span {
