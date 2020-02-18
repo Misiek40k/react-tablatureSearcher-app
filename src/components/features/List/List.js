@@ -32,7 +32,7 @@ const List = ({ apiData, checked }) => {
           onClick={() => setActivePage(i)}
           className={i === activePage ? styles.active : null}
         >
-          page {i}
+          {`page ${i}`}
         </span>
       </li>
     );
