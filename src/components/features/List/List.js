@@ -21,7 +21,7 @@ const List = ({ apiData, checked }) => {
     <Fragment>
       <Row>
         <Col {...settings.col}>
-          <Title subtitle={`${data.title} ${apiData.length}`} />
+          <Title subtitle={`${data.title} ${filteredList.length}`} />
         </Col>
       </Row>
       <Row>
