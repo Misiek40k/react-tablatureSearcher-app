@@ -34,5 +34,6 @@ export const settings = {
   },
   list: {
     title: 'Found records: ',
+    href: 'https://www.songsterr.com/a/wa/song?id=',
   },
 };

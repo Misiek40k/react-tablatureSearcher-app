@@ -12,7 +12,7 @@ const ListItem = ({ id, title, artist: { name }, tabTypes }) => {
 
     <Col {...settings.col}>
       <div className={styles.component}>
-        <a href={`https://www.songsterr.com/a/wa/song?id=${id}`}
+        <a href={`${settings.list.href}${id}`}
           target='blank'
           className={styles.link}
         >
