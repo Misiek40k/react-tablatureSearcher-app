@@ -8,14 +8,14 @@
 
   li {
     display: inline-block;
-    margin-left: 0.5rem;
+    margin-left: $base-size * 0.66;
   }
 
   span {
     display: block;
-    width: 13px;
-    height: 13px;
-    border-radius: 6px;
+    width: $base-size;
+    height: $base-size;
+    border-radius: $base-size * 0.5;
     background-color: $color-background;
     font-size: 0;
     cursor: pointer;
