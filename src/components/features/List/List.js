@@ -2,26 +2,18 @@ import React, { Fragment, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-flexbox-grid';
 import { settings } from '../../../data/dataStore';
-import { convertTabType } from '../../../utils/convertTabType';
 
 import Title from '../../common/Title/Title';
 import ListItem from '../ListItem/ListItem';
 
 import styles from './List.module.scss';
 
-const List = ({ apiData, checked }) => {
+const List = ({ filteredList }) => {
   const data = settings.list;
 
   const [activePage, setActivePage] = useState(0);
   const pageItems = 25;
   const pagination = [];
-
-  const filteredList = apiData.filter(item => {
-    const shouldBeVisible = item.tabTypes.every(type => {
-      return checked[convertTabType(type)];
-    });
-    return shouldBeVisible;
-  });
 
   const pagesCount = Math.ceil(filteredList.length / pageItems);
 
@@ -62,8 +54,7 @@ const List = ({ apiData, checked }) => {
 };
 
 List.propTypes = {
-  apiData: PropTypes.array,
-  checked: PropTypes.object,
+  filteredList: PropTypes.array,
 };
 
 export default List;

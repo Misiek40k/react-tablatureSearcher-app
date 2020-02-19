@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import { settings } from '../../../data/dataStore';
+import { convertTabType } from '../../../utils/convertTabType';
 
 import Title from '../../common/Title/Title';
 import Search from '../../features/Search/Search';
@@ -34,6 +35,13 @@ const ContentContainer = () => {
       );
   };
 
+  const filteredList = apiData.filter(item => {
+    const shouldBeVisible = item.tabTypes.every(type => {
+      return checked[convertTabType(type)];
+    });
+    return shouldBeVisible;
+  });
+
   return (
     <section className={styles.component}>
       <Grid>
@@ -56,7 +64,7 @@ const ContentContainer = () => {
           </Col>
         </Row>
         {apiData.length > 0 &&
-          <List apiData={apiData} checked={checked} />
+          <List filteredList={filteredList} />
         }
       </Grid>
     </section>
