@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## React Tablature Searcher App
+
+Search for your favorite songs in the rich [Songsterr.com](https://www.songsterr.com/) tablature collection.
+
+### Live
+
+Open live on: [GH-Pages](https://misiek40k.github.io/react-tablatureSearcher-app/).
+
 
 ## Available Scripts
 
