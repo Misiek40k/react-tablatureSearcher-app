@@ -1,8 +1,8 @@
 {
-  "name": "react-tablature-searcher",
+  "name": "react-tablature-searcher-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://misiek40k.github.io/react-tablatureSearcher-app",
+  "homepage": "https://misiek40k.github.io/react-tablature-searcher-app",
   "scripts": {
     "start": "run-p start:* ",
     "start-silent": "run-p start > /dev/null",
