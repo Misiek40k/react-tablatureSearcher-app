@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/react-tablaturesearcher-app/static/css/main.dccfb113.chunk.css",
-    "main.js": "/react-tablaturesearcher-app/static/js/main.0255e8b5.chunk.js",
-    "main.js.map": "/react-tablaturesearcher-app/static/js/main.0255e8b5.chunk.js.map",
-    "runtime-main.js": "/react-tablaturesearcher-app/static/js/runtime-main.3f65cfe0.js",
-    "runtime-main.js.map": "/react-tablaturesearcher-app/static/js/runtime-main.3f65cfe0.js.map",
-    "static/css/2.22d6b5ec.chunk.css": "/react-tablaturesearcher-app/static/css/2.22d6b5ec.chunk.css",
-    "static/js/2.26f7c21d.chunk.js": "/react-tablaturesearcher-app/static/js/2.26f7c21d.chunk.js",
-    "static/js/2.26f7c21d.chunk.js.map": "/react-tablaturesearcher-app/static/js/2.26f7c21d.chunk.js.map",
-    "index.html": "/react-tablaturesearcher-app/index.html",
-    "precache-manifest.981af5362556af2811d564686aa7fca6.js": "/react-tablaturesearcher-app/precache-manifest.981af5362556af2811d564686aa7fca6.js",
-    "service-worker.js": "/react-tablaturesearcher-app/service-worker.js",
-    "static/css/2.22d6b5ec.chunk.css.map": "/react-tablaturesearcher-app/static/css/2.22d6b5ec.chunk.css.map",
-    "static/css/main.dccfb113.chunk.css.map": "/react-tablaturesearcher-app/static/css/main.dccfb113.chunk.css.map",
-    "static/js/2.26f7c21d.chunk.js.LICENSE.txt": "/react-tablaturesearcher-app/static/js/2.26f7c21d.chunk.js.LICENSE.txt"
+    "main.css": "/react-tablature-searcher-app/static/css/main.dccfb113.chunk.css",
+    "main.js": "/react-tablature-searcher-app/static/js/main.ba148f0b.chunk.js",
+    "main.js.map": "/react-tablature-searcher-app/static/js/main.ba148f0b.chunk.js.map",
+    "runtime-main.js": "/react-tablature-searcher-app/static/js/runtime-main.4709a4ac.js",
+    "runtime-main.js.map": "/react-tablature-searcher-app/static/js/runtime-main.4709a4ac.js.map",
+    "static/css/2.22d6b5ec.chunk.css": "/react-tablature-searcher-app/static/css/2.22d6b5ec.chunk.css",
+    "static/js/2.5ae24617.chunk.js": "/react-tablature-searcher-app/static/js/2.5ae24617.chunk.js",
+    "static/js/2.5ae24617.chunk.js.map": "/react-tablature-searcher-app/static/js/2.5ae24617.chunk.js.map",
+    "index.html": "/react-tablature-searcher-app/index.html",
+    "precache-manifest.0379df7248736ba66f83662947719ce3.js": "/react-tablature-searcher-app/precache-manifest.0379df7248736ba66f83662947719ce3.js",
+    "service-worker.js": "/react-tablature-searcher-app/service-worker.js",
+    "static/css/2.22d6b5ec.chunk.css.map": "/react-tablature-searcher-app/static/css/2.22d6b5ec.chunk.css.map",
+    "static/css/main.dccfb113.chunk.css.map": "/react-tablature-searcher-app/static/css/main.dccfb113.chunk.css.map",
+    "static/js/2.5ae24617.chunk.js.LICENSE.txt": "/react-tablature-searcher-app/static/js/2.5ae24617.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.3f65cfe0.js",
+    "static/js/runtime-main.4709a4ac.js",
     "static/css/2.22d6b5ec.chunk.css",
-    "static/js/2.26f7c21d.chunk.js",
+    "static/js/2.5ae24617.chunk.js",
     "static/css/main.dccfb113.chunk.css",
-    "static/js/main.0255e8b5.chunk.js"
+    "static/js/main.ba148f0b.chunk.js"
   ]
 }
