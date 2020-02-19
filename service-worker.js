@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-tablature-searcher-app/precache-manifest.0379df7248736ba66f83662947719ce3.js"
+  "/react-tablature-searcher-app/precache-manifest.f1e8dc30b626b9ed56468c1266b11f41.js"
 );
 
 self.addEventListener('message', (event) => {
