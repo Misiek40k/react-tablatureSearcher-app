@@ -1,4 +1,4 @@
-@import '../../../styles/settings.scss';
+@import "../../../styles/settings.scss";
 
 .component {
   background: $color-success;
@@ -6,8 +6,8 @@
   color: $color-light;
   text-align: center;
   line-height: 1.3;
-  padding: $base-size;
-  margin: 0 $base-size;
+  padding: $base-unit * 0.6;
+  margin: 0 $base-unit*.6;
   border-radius: $radius;
   cursor: pointer;
   font-weight: $fw-bold;

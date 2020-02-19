@@ -5,20 +5,17 @@
   padding: 0;
   list-style: none;
   background-color: $color-light;
+  display: inline-block;
+  margin-left: $base-unit * 0.4;
 
-  li {
-    display: inline-block;
-    margin-left: $base-size * 0.66;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
+  &:first-of-type {
+    margin-left: 0;
   }
 
   span {
     display: block;
-    width: $base-size;
-    height: $base-size;
+    width: $base-unit*.6;
+    height: $base-unit*.6;
     border-radius: $base-size * 0.5;
     background-color: $color-background;
     font-size: 0;
