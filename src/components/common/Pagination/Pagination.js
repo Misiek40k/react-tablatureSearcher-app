@@ -20,9 +20,7 @@ const Pagination = ({ pagesCount, activePage, setActivePage }) => {
   }
 
 
-  return (
-    <ul className={styles.list}>{pagination}</ul>
-  );
+  return <ul className={styles.list}>{pagination}</ul>;
 };
 
 Pagination.propTypes = {
