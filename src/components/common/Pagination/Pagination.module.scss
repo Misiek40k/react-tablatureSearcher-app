@@ -14,9 +14,9 @@
 
   span {
     display: block;
-    width: $base-unit*.6;
-    height: $base-unit*.6;
-    border-radius: $base-size * 0.5;
+    width: $base-unit * 0.6;
+    height: $base-unit * 0.6;
+    border-radius: $base-unit * 0.3;
     background-color: $color-background;
     font-size: 0;
     cursor: pointer;

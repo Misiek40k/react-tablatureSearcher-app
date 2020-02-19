@@ -2,24 +2,24 @@
 
 .component {
   background: $color-dark;
-  padding: ($base-size * 1.5) 0;
+  padding: $base-unit * 0.9 0;
   color: $color-light;
 
   @include max-media($br-tablet) {
-      text-align: center;
+    text-align: center;
   }
 }
 
 .logo {
   color: $color-light;
-  font-size: 24px;
+  font-size: $base-unit * 1.2;
 }
 
 .name {
   position: relative;
-  top: ($base-size / -4);
-  left: $base-size;
+  top: $base-unit * -0.15;
+  left: $base-unit * 0.6;
   font-family: $font-header;
   text-transform: lowercase;
-  font-size: ($base-size * 1.5);
+  font-size: $base-unit * 0.9;
 }

@@ -2,7 +2,7 @@
 
 .component {
   color: $color-light;
-  padding-left: ($base-size * 2);
+  padding-left: $base-unit * 1.2;
   margin: 0;
   white-space: nowrap;
 }
