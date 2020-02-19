@@ -5,30 +5,15 @@ import { settings } from '../../../data/dataStore';
 
 import Title from '../../common/Title/Title';
 import ListItem from '../ListItem/ListItem';
+import Pagination from '../../common/Pagination/Pagination';
 
-import styles from './List.module.scss';
 
 const List = ({ filteredList }) => {
   const data = settings.list;
 
   const [activePage, setActivePage] = useState(0);
-  const pageItems = 25;
-  const pagination = [];
-
+  const pageItems = data.pageItems;
   const pagesCount = Math.ceil(filteredList.length / pageItems);
-
-  for (let i = 0; i < pagesCount; i++) {
-    pagination.push(
-      <li className={styles.list} key={i}>
-        <span
-          onClick={() => setActivePage(i)}
-          className={i === activePage ? styles.active : null}
-        >
-          {`page ${i}`}
-        </span>
-      </li>
-    );
-  }
 
   return (
     <Fragment>
@@ -39,7 +24,10 @@ const List = ({ filteredList }) => {
       </Row>
       <Row center="xs">
         <Col xs>
-          <ul className={styles.list}>{pagination}</ul>
+          <Pagination
+            pagesCount={pagesCount}
+            activePage={activePage}
+            setActivePage={setActivePage} />
         </Col>
       </Row>
       <Row>
