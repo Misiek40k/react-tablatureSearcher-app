@@ -4,7 +4,7 @@ import { settings } from '../../../data/dataStore';
 
 import Icon from '../Icon/Icon';
 
-import styles from './Checkboxes.module.scss';
+import styles from './Checkbox.module.scss';
 
 const Checkboxes = ({ label, checked, setChecked }) => {
 

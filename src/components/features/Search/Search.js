@@ -4,7 +4,7 @@ import { settings } from '../../../data/dataStore';
 
 import Button from '../../common/Button/Button';
 import Icon from '../../common/Icon/Icon';
-import Checkboxes from '../../common/Checkboxes/Checkboxes';
+import Checkbox from '../../common/Checkbox/Checkbox';
 
 import styles from './Search.module.scss';
 
@@ -24,7 +24,7 @@ const Search = ({ makeVisible, visibleButtons, setValue, value, fetchData, check
       />
       <div className={styles.checkboxes}>
         {data.checkboxes.map(item => (
-          <Checkboxes key={item} label={item} checked={checked} setChecked={setChecked} />
+          <Checkbox key={item} label={item} checked={checked} setChecked={setChecked} />
         ))}
       </div>
       <div className={styles.buttons + (visibleButtons ? ` ${styles.buttonsShown}` : '')}>
