@@ -7,6 +7,7 @@
   background-color: $color-light;
   display: inline-block;
   margin-left: $base-unit * 0.4;
+  animation: fadeIn 1s;
 
   &:first-of-type {
     margin-left: 0;

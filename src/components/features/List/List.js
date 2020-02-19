@@ -7,6 +7,8 @@ import Title from '../../common/Title/Title';
 import ListItem from '../ListItem/ListItem';
 import Pagination from '../../common/Pagination/Pagination';
 
+import styles from './List.module.scss';
+
 
 const List = ({ filteredList }) => {
   const data = settings.list;
@@ -19,7 +21,9 @@ const List = ({ filteredList }) => {
     <Fragment>
       <Row>
         <Col {...settings.col}>
-          <Title subtitle={`${data.title} ${filteredList.length}`} />
+          <div className={styles.title}>
+            <Title subtitle={`${data.title} ${filteredList.length}`} />
+          </div>
         </Col>
       </Row>
       <Row center="xs">
