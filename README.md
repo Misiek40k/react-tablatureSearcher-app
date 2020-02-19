@@ -4,7 +4,7 @@ Search for your favorite songs in the rich [Songsterr.com](https://www.songsterr
 
 ### Live
 
-Open live on: [GH-Pages](https://misiek40k.github.io/react-tablature-searcher-app).
+Open live on: [GH-Pages](https://misiek40k.github.io/react-tablature-searcher-app/).
 
 
 ## Available Scripts
